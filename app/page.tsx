@@ -1,6 +1,5 @@
 "use client";
 import { Button } from "@nextui-org/button";
-
 import { Spacer } from "@nextui-org/spacer";
 import { useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../components/ui/dialog";
@@ -9,9 +8,11 @@ import { DialogTrigger } from "@radix-ui/react-dialog";
 export default function Home() {
   const [env, setEnv] = useState<string>("");
   useEffect(() => {
-    setEnv(process.env.NEXT_PUBLIC_ENV||"empty");
+    fetch('/api/getText')
+      .then(response => response.json())
+      .then(data => setEnv(data.text))
+      .catch(error => console.error('Error fetching TEXT:', error));
   }, []);
-
 
   return (
     <div className="h-full w-full flex flex-col justify-center items-center">
@@ -25,7 +26,7 @@ export default function Home() {
         </DialogTrigger>
         <DialogContent  className="bg-secondary-50  w-[500px] h-[300px] font-extrabold justify-center items-center border-none  ">
           <DialogHeader>
-            <div className="absolute  w-full h-full " />
+            <div className="absolute  w-full h-full" />
 
             <DialogTitle>
               <h1
