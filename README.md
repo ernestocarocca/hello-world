@@ -1,10 +1,12 @@
-# Next.js & NextUI Template
+# Hello World
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+This is a Hello World web application that displays a text provided as an environment variable.
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+Used as an example to show how an open source application can be made available as software as a service in Open Source Cloud. When made available in Open Source Cloud a user can create their own instance of this application with their configuration provided via environment variables.
 
 ## Technologies Used
+
+The app was based on a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
 
 - [Next.js 14](https://nextjs.org/docs/getting-started)
 - [NextUI v2](https://nextui.org/)
@@ -15,14 +17,6 @@ This is a template for creating applications using Next.js 14 (app directory) an
 - [next-themes](https://github.com/pacocoursey/next-themes)
 
 ## How to Use
-
-### Use the template with create-next-app
-
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
 
 ### Install dependencies
 
@@ -35,19 +29,10 @@ npm install
 ### Run the development server
 
 ```bash
-npm run dev
+TEXT="This is my text" npm run dev
 ```
 
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
+![Screenshot of application](screenshot.png)
 ## License
 
 Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
