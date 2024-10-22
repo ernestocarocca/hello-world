@@ -16,26 +16,26 @@ export default function Home() {
 
   return (
     <div className="h-full w-full flex flex-col justify-center items-center">
-      <h2 className=" text-8xl font-extrabold">Welcome</h2>
+      <h2 className="sm:text-8xl text-6xl font-extrabold">Welcome</h2>
       <Spacer y={20} />
       <Dialog >
         <DialogTrigger asChild>
-          <Button className="text-2xl py-3 font-extrabold " color="primary" variant="shadow">
+          <Button className="sm:text-2xl  py-3 font-extrabold " color="primary" variant="shadow">
             Show Enviroment Variable
           </Button>
         </DialogTrigger>
-        <DialogContent  className="bg-secondary-50  w-[500px] h-[300px] font-extrabold justify-center items-center border-none  ">
+        <DialogContent  className="bg-secondary-50 sm:w-[500px] h-[300px] font-extrabold justify-center items-center border-none  ">
           <DialogHeader>
-            <div className="absolute  w-full h-full" />
+            <div className="absolute w-full h-full" />
 
             <DialogTitle>
               <h1
-                className="md:text-4xl text-xl text-white relative z-20"
+                className="md:text-4xl text-xl text-white relative  z-20"
               >
                 Hello World
               </h1>
             </DialogTitle>
-            <p className=" text-4xl text-center text-whit opacity-40">{
+            <p className=" sm:text-4xl text-center text-whit opacity-40">{
               env
             }</p>
           </DialogHeader>
